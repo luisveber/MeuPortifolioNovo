@@ -129,10 +129,9 @@ form input, form textarea {
 }
 
 .hamburger-menu {
-    display: none;
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px; /* Altera para o lado direito */
     cursor: pointer;
     z-index: 1001; /* Certifique-se de que o botão de hambúrguer esteja acima da sidebar */
 }
@@ -145,22 +144,18 @@ form input, form textarea {
     background-color: #333;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-250px);
-    }
-    
-    .sidebar.active {
-        transform: translateX(0);
-    }
-
     .content {
         margin-left: 0;
         width: 100%;
     }
+}
 
-    .hamburger-menu {
-        display: block;
-    }
+.sidebar.collapsed {
+    transform: translateX(-250px);
+}
+
+.content.collapsed {
+    margin-left: 0;
+    width: 100%;
 }

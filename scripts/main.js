@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroBtn = document.querySelector('.hero .btn');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const sidebar = document.querySelector('.sidebar');
+    const content = document.querySelector('.content');
 
     const scrollToSection = (event) => {
         event.preventDefault();
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fechar o menu lateral ao clicar em um link em telas menores
         if (window.innerWidth <= 768) {
             sidebar.classList.remove('active');
+            content.classList.remove('collapsed');
         }
     };
 
@@ -31,6 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     hamburgerMenu.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+        sidebar.classList.toggle('collapsed');
+        content.classList.toggle('collapsed');
     });
+
+    const handleResize = () => {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.add('collapsed');
+            content.classList.add('collapsed');
+        } else {
+            sidebar.classList.remove('collapsed');
+            content.classList.remove('collapsed');
+        }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Executa a função handleResize quando a página for carregada para definir o estado inicial
+    handleResize();
 });

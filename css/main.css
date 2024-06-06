@@ -1,19 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   font-family: "Poppins";
-}
-
-/* styles/style.css */
-/* Responsivo */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
+/* styles/style.css */
 .sidebar {
   position: fixed;
   width: 250px;
@@ -53,7 +47,7 @@ body {
 }
 
 .hero {
-  background-image: url("images/hero-background.jpg");
+  background-image: url("/img/hero.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -113,26 +107,10 @@ section h2 {
   margin-bottom: 20px;
 }
 
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-form input {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-form textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-
 .hamburger-menu {
-  display: none;
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   cursor: pointer;
   z-index: 1001;
 }
@@ -141,24 +119,47 @@ form textarea {
   width: 30px;
   height: 4px;
   margin: 5px 0;
-  background-color: #333;
+  background-color: #fff;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-250px);
+}
+
+.content.collapsed {
+  margin-left: 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-250px);
-  }
-  .sidebar.active {
-    transform: translateX(0);
-  }
   .content {
     margin-left: 0;
     width: 100%;
   }
-  .hamburger-menu {
-    display: block;
-  }
 }
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+form input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 20px;
+}
+form textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 0.875em;
+  padding: 5px;
+}
+
 .container {
   width: 100%;
   max-width: 1246px;
