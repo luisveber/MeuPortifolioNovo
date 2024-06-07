@@ -1,17 +1,11 @@
 /* styles/style.css */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
 
 .sidebar {
     position: fixed;
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #111514;
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -21,11 +15,23 @@ body {
 
 .sidebar h2 {
     margin-top: 0;
+    text-align: center;
+}
+
+.sidebar .profile-pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid ;
+    margin: 10px auto 20px auto;
+    object-fit: cover;
 }
 
 .sidebar nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .sidebar nav ul li {
@@ -43,15 +49,15 @@ body {
 }
 
 .content {
-    margin-left: 270px; /* Espaço suficiente para o menu lateral */
+    margin-left: 250px; /* Espaço suficiente para o menu lateral */
     padding: 0;
     box-sizing: border-box;
-    width: calc(100% - 270px);
+    width: calc(100% - 250px);
     transition: margin-left 0.3s ease-in-out;
 }
 
 .hero {
-    background-image: url('images/hero-background.jpg'); /* Caminho da imagem de fundo */
+    background-image: url('https://thainanprado.com.br/img/wallpaper.jpg'); /* Caminho da imagem de fundo */
     background-size: cover;
     background-position: center;
     height: 100vh;

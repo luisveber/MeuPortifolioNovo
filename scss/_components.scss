@@ -1,5 +1,4 @@
 /* styles/style.css */
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 .sidebar {
 	position: fixed;
 	width: 250px;
@@ -10,19 +9,36 @@
 	box-sizing: border-box;
 	transition: transform 0.3s ease-in-out;
 	z-index: 1000;
+
 	h2 {
 		margin-top: 0;
+		text-align: center;
 	}
+
+	.profile-pic {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 10px solid;
+		margin: 10px auto 20px auto;
+		object-fit: cover;
+	}
+
 	nav {
 		ul {
 			list-style: none;
 			padding: 0;
+			text-align: center;
+
 			li {
 				margin: 20px 0;
+
 				a {
 					color: $color_1;
 					text-decoration: none;
 					font-size: 18px;
+
 					&:hover {
 						text-decoration: underline;
 					}
@@ -31,13 +47,15 @@
 		}
 	}
 }
+
 .content {
-	margin-left: 270px;
+	margin-left: 250px;
 	padding: 0;
 	box-sizing: border-box;
-	width: calc(100% - 270px);
+	width: calc(100% - 250px);
 	transition: margin-left 0.3s ease-in-out;
 }
+
 .hero {
 	background-image: url('/img/hero.jpg');
 	background-size: cover;
@@ -49,6 +67,7 @@
 	color: $color_1;
 	text-align: center;
 	position: relative;
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -58,14 +77,17 @@
 		bottom: 0;
 		background: rgba(0, 0, 0, 0.5);
 	}
+
 	h1 {
 		font-size: 48px;
 		margin: 0;
 	}
+
 	p {
 		font-size: 24px;
 		margin: 10px 0;
 	}
+
 	.btn {
 		display: inline-block;
 		margin-top: 20px;
@@ -75,25 +97,69 @@
 		text-decoration: none;
 		border-radius: 5px;
 		transition: background-color 0.3s;
+
 		&:hover {
 			background-color: $background-color_3;
 		}
 	}
 }
+
 .hero-content {
 	position: relative;
 	z-index: 1;
 }
+
 section {
 	padding: 20px;
-	margin: 20px 0;
+	margin:  0;
+	text-align: center;
+
 	h2 {
 		border-bottom: 2px solid #333;
 		padding-bottom: 5px;
 	}
 }
+section#home {
+	padding: 0;
+	background-color: $background-color_1;
+	color: white; /* Texto branco para contraste */
+}
+section#sobre {
+	background-color: $section_background-color_1;
+	color: white; /* Texto branco para contraste */
+}
+
+section#projetos {
+	background-color: $section_background-color_2;
+	color: white; /* Texto branco para contraste */
+}
+
+section#contato {
+	background-color: $section_background-color_1;
+	color: white; /* Texto branco para contraste */
+}
+
 .projeto {
 	margin-bottom: 20px;
+}
+
+form {
+	label {
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	input {
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+
+	textarea {
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 5px;
+	}
 }
 
 .hamburger-menu {
@@ -102,21 +168,51 @@ section {
 	right: 20px;
 	cursor: pointer;
 	z-index: 1001;
+
 	span {
 		display: block;
 		width: 30px;
 		height: 4px;
 		margin: 5px 0;
-		background-color:$background-color_4;
+		background-color: $background-color_4;
 	}
 }
+
 .sidebar.collapsed {
 	transform: translateX(-250px);
 }
+
 .content.collapsed {
 	margin-left: 0;
 	width: 100%;
 }
+
+
+.footer {
+	background-color: $background-color_1;
+	color: $color_1;
+	text-align: center;
+	padding: 20px 0;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+
+	a {
+		color: $color_1;
+		text-decoration: none;
+		margin: 0 10px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 @media (max-width: 768px) {
 	.content {
 		margin-left: 0;

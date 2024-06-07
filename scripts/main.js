@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fechar o menu lateral ao clicar em um link em telas menores
         if (window.innerWidth <= 768) {
-            sidebar.classList.remove('active');
-            content.classList.remove('collapsed');
+            sidebar.classList.add('collapsed');
+            content.classList.add('collapsed');
         }
     };
 

@@ -1,0 +1,14 @@
+{
+  "name": "meuportifolionovo",
+  "version": "0.0.1",
+  "description": "portifolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss/global.scss:src/css/main.css --style compressed"
+  },
+  "keywords": [
+    "portifolio"
+  ],
+  "author": "Luis Henrique Veber",
+  "license": "ISC"
+}
